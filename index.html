@@ -1,23 +1,38 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
-		<meta>
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>body {font-size: 1.1em; line-height: 1.5em; max-width: 45em; margin: auto; padding: 0 2%;} h1,h2,h3 {line-height: 1.2;} img {max-width: 100%; display: block; margin: .75em auto;}</style>
+		<title>To-do list for UI mentoring</title>
 	</head>
 	<body>
 		<main>
+			<h1>Very first to-do list for mentoring</h1>
 			<ul>
-				<li>as</li>
-				<li>d</li>
-				<li>dfdf</li>
-				<li>dfdf</li>
-				add item:
-				<form>
-					<input type="text" name="todo" value="">
-					<br>
-					<input type="submit" value="Add item">
-				</form>
+				<li><span>as</span><button type="button">Delete</button><button type="button">Edit</button><button type="button">Done</button></li>
+				<li><span>d</span><button type="button">Delete</button><button type="button">Edit</button><button type="button">Done</button></li>
+				<li><span>dfdf</span><button type="button">Delete</button><button type="button">Edit</button><button type="button">Done</button></li>
+				<li><span>dfdf</span><button type="button">Delete</button><button type="button">Edit</button><button type="button">Done</button></li>
 			</ul>
+			<br />
+			
+			<form method="POST">
+				<fieldset>
+					<legend>Adding to-do items</legend>
+					<label for="todo">add an item:</label>
+					<input type="text" name="todo" id="todo" placeholder="A thing to-do">
+					<label for="prio">set priority:</label>
+					<select id="prio">
+						<option hidden disabled selected label="empty" value=""></option>
+						<option value="high">HIGH</option>
+						<option value="normal">NORMAL</option>
+						<option value="low">LOW</option>
+					</select>
+					<button type="submit">Add item</button>
+				</fieldset>
+			</form>
+			
 		</main>
 	</body>
 </html>

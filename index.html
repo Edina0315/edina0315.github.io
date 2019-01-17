@@ -3,36 +3,57 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<style>body {font-size: 1.1em; line-height: 1.5em; max-width: 45em; margin: auto; padding: 0 2%;} h1,h2,h3 {line-height: 1.2;} img {max-width: 100%; display: block; margin: .75em auto;}</style>
+		<style>body{font-size:1.1em;line-height:150%;max-width:45em;margin:auto;padding:0 2%;} h1,h2,h3{line-height:1.2;}img{max-width:100%;display:block;margin:.75em auto;}</style>
 		<title>To-do list for UI mentoring</title>
 	</head>
 	<body>
 		<main>
 			<h1>Very first to-do list for mentoring</h1>
 			<ul>
-				<li><span>as</span><button type="button">Delete</button><button type="button">Edit</button><button type="button">Done</button></li>
-				<li><span>d</span><button type="button">Delete</button><button type="button">Edit</button><button type="button">Done</button></li>
-				<li><span>dfdf</span><button type="button">Delete</button><button type="button">Edit</button><button type="button">Done</button></li>
-				<li><span>dfdf</span><button type="button">Delete</button><button type="button">Edit</button><button type="button">Done</button></li>
+				<li><span>as</span><button type="button" title="Delete">Delete</button><button type="button" title="Edit">Edit</button><button type="button" title="Done">Done</button></li>
+				<li><span>d</span><button type="button" title="Delete">Delete</button><button type="button" title="Edit">Edit</button><button type="button" title="Done">Done</button></li>
+				<li><span>dfdf</span><button type="button" title="Delete">Delete</button><button type="button" title="Edit">Edit</button><button type="button" title="Done">Done</button></li>
+				<li><span>dfdf</span><button type="button" title="Delete">Delete</button><button type="button" title="Edit">Edit</button><button type="button" title="Done">Done</button></li>
 			</ul>
 			<br />
-			
-			<form method="POST">
+
+			<form method="GET">
 				<fieldset>
-					<legend>Adding to-do items</legend>
-					<label for="todo">add an item:</label>
-					<input type="text" name="todo" id="todo" placeholder="A thing to-do">
-					<label for="prio">set priority:</label>
-					<select id="prio">
-						<option hidden disabled selected label="empty" value=""></option>
-						<option value="high">HIGH</option>
-						<option value="normal">NORMAL</option>
-						<option value="low">LOW</option>
+					<legend title="Adding a to-do item">Adding a to-do item</legend>
+					<label for="title"><span title="Write the title of the task">Title:</span></label>
+					<input title="Title of the task" type="text" name="title" id="title" placeholder="A thing to-do" required autofocus>
+					<br />
+					<label for="descr" title="Write decription of the task">Description:</label>
+					<textarea title="Description" name="descr" id="descr" placeholder="Description" required rows="4" cols="50"></textarea>
+					<br />
+					<label for="urgent" title="Check if it's urgent">Is it urgent?</label>
+					<input type="checkbox" name="urgent" value="urgent" title="Urgency" id="urgent">
+					<br />
+					<span title="Select the priority">Priority:</span>
+					<label title="High" for="high"><input type="radio" name="prio" value="high" id="high" required><span>high</span></label>
+					<label title="Normal" for="normal"><input type="radio" name="prio" value="normal" id="normal"><span>normal</span></label>
+					<label title="Low" for="low"><input type="radio" name="prio" value="low" id="low"><span>low</span></label>
+					<br />
+					<label for="day"><span title="Select a day to start">Day to start:</span></label>
+					<select id="day" required title="Starting day">
+						<option hidden disabled selected label=" " value=""></option>
+						<option value="mon">Monday</option>
+						<option value="tue">Tuesday</option>
+						<option value="wed">Wednesday</option>
+						<option value="thu">Thursday</option>
+						<option value="fri">Friday</option>
+						<option value="sat">Saturday</option>
+						<option value="sun">Sunday</option>
 					</select>
-					<button type="submit">Add item</button>
+					<br />
+					<label for="deadline"><span title="Select a deadline for the task">Deadline:</span></label>
+					<input title="Date" type="date" id="deadline" name="deadline" min="2019-01-15" max="2079-12-31" value="2019-01-15" required>
+					<br />
+					<button title="Click this button to submit the to-do" type="submit">Add item</button>
+					<button title="Click this button to reset the fields" type="reset">Reset</button>
 				</fieldset>
 			</form>
-			
+
 		</main>
 	</body>
 </html>

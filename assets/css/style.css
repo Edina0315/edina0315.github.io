@@ -1,0 +1,202 @@
+ul,
+ol{
+  list-style: none;
+}
+
+li{
+    display: list-item;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+font,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+main,
+mark,
+menu,
+meter,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+progress,
+q,
+rp,
+rt,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video,
+xmp {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+textarea{
+    min-height: 40px;
+    resize: vertical;
+}
+main{
+    width:90%;
+    margin:2em auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+fieldset{
+    text-align: center;
+    border-top: 1px solid lightgray;
+}
+fieldset div{
+    display: block;
+    margin-bottom: 1em;
+}
+legend{
+    line-height: 2;
+}
+input[type="text"],textarea{
+    width: 100%;
+}
+#list li{
+    padding: 0.7em;
+    margin-top: 0.3em;
+}
+#list li span{
+    display: block;
+}
+#list li:nth-child(even){
+    background-color: lightgray;
+}
+#list li:nth-child(odd){
+    background-color: #eee;
+}
+#list li div{
+    text-align: center;
+}
+@media only screen and (max-width:600px){
+
+}
+@media only screen and (min-width:601px){
+    #list li span, #list li div{
+        display: inline;
+    }
+    #list li div{
+        float: right;
+        top: -3px; 
+        position: relative;
+    }
+    fieldset{
+        text-align: left
+    }
+    fieldset div label:first-child, fieldset div>span{
+        width: 30%;
+        float: left;
+    }
+    input[type="text"],textarea{
+        width: 68%;
+        float: left;
+    }
+    fieldset div:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    #formsubmit{
+        text-align: center
+    }
+}
+@media only screen and (min-width:768px){
+    main{
+        width: 70%
+    }
+}
+@media only screen and (min-width:992px){
+    main{
+        width: 60%
+    }
+    
+    #formsubmit{
+        width: 100%
+    }
+}
+@media only screen and (min-width:1200px){
+    fieldset div{
+        float: left;
+        width: 48%;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+}

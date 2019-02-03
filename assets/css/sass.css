@@ -1,0 +1,246 @@
+ul,
+ol {
+  list-style: none;
+}
+
+li {
+  display: list-item;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+font,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+main,
+mark,
+menu,
+meter,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+progress,
+q,
+rp,
+rt,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video,
+xmp {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+textarea {
+  min-height: 40px;
+  resize: vertical;
+}
+
+#list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+#list li {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  /*flex-basis: 0;*/
+  min-height: 150px;
+  position: relative;
+  margin: 0.25%;
+  width: 100%;
+}
+#list li span {
+  display: block;
+  padding: 2%;
+}
+#list li div {
+  text-align: center;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+}
+
+@media all and (min-width: 601px) {
+  #list li {
+    width: 99.75%;
+  }
+  #list li span {
+    padding: 1.5%;
+  }
+
+  .dummaytexs {
+    display: inline;
+  }
+}
+@media all and (min-width: 768px) {
+  #list li {
+    width: 32.5833333333%;
+  }
+  #list li span {
+    padding: 4.5%;
+  }
+
+  .dummaytexs {
+    display: inline;
+  }
+}
+@media all and (min-width: 992px) {
+  #list li {
+    width: 24%;
+  }
+  #list li span {
+    padding: 6%;
+  }
+
+  .dummaytexs {
+    display: inline;
+  }
+}
+@media all and (min-width: 1200px) {
+  #list li {
+    width: 15.1666666667%;
+  }
+  #list li span {
+    padding: 9%;
+  }
+
+  .dummaytexs {
+    display: inline;
+  }
+}
+.urgent {
+  -webkit-box-shadow: inset 0px 0px 0px 5px darkred;
+          box-shadow: inset 0px 0px 0px 5px darkred;
+}
+
+main {
+  width: 96%;
+  margin: 2em auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+fieldset {
+  text-align: center;
+  border-top: 1px solid lightgray;
+}
+fieldset div {
+  display: block;
+  margin-bottom: 1em;
+}
+
+legend {
+  line-height: 2;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+}
+
+form {
+  clear: both;
+}
+
+.high {
+  background-color: red;
+  color: #eee;
+}
+
+.normal {
+  background-color: #eee;
+}
+
+.low {
+  background-color: green;
+  color: #eee;
+}
+
+/*# sourceMappingURL=sass.css.map */

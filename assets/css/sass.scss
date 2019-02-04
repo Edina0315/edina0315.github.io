@@ -128,7 +128,7 @@ textarea{
             display: block;
             padding: 2%
         }
-        div{
+        .list-buttons{
             text-align: center;
             position: absolute;
             bottom: 20%;    
@@ -137,25 +137,37 @@ textarea{
             width: 100%;
         }
     }
-
 }
-
+/*map for breakpoints & to-do columns*/
 $map: (601:1, 768:3, 992:4, 1200:6);
-
+/*colormap for to-do cells*/
 $colormap: (urgent:darkred, high:red, normal:#eee, low:green);
+/*font colors for whole site*/
 $font: (black:#333, white:#eee);
+
+/*later it will be useful*/
+/*min 601px*/
+@media all and (min-width: (nth(nth($map, 1), 1) + px)){ 
+}
+/*min 992px*/
+@media all and (min-width: (nth(nth($map, 3), 1) + px)){
+}
+/*min 1200px*/
+@media all and (min-width: (nth(nth($map, 4), 1) + px)){ 
+}
 
 @each $key, $val in $map {
     @media all and (min-width:( $key + px)){
         $eq: 100% / $val - $val * 0.25%;     
         
         #list li{
+            //not sure which one is better, flex seems to be worse
+            /*flex: $eq;*/
             width: $eq;
             span{
                 padding: $val *1.5%;
             }
         }
-        .dummaytexs{display: inline;}
     }
 }
 
@@ -169,23 +181,51 @@ main{
     font-family: Arial, sans-serif;
     color: map-get($font, black);
 }
+
 fieldset{
+    border-top: 1px solid map-get($font, white);
     text-align: center;
-    border-top: 1px solid lightgray;
-    div{
-        display: block;
-        margin-bottom: 1em;
-    }
+    #flex-workaround{
+        display: flex;
+        flex-direction: column;
+        .form-fields{
+            margin: 0.25%;
+            display: flex;
+            flex-direction: column;
+            width: 99%;
+            align-items: center;
+            border: 1px solid map-get($font, white);
+            label:only-of-type{
+                padding: 0.5em;
+            }
+        }
+        @media all and (min-width: (nth(nth($map, 2), 1) + px)){ 
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-direction: row;
+            .form-fields{
+                width: 49%;
+                justify-content: center;
+                min-height: 130px;
+                label~*{
+                    width: 75%;
+                }
+            }
+        }
+        @media all and (min-width: (nth(nth($map, 3), 1) + px)){ 
+            .form-fields{
+                flex-direction: row;
+                label~*{
+                    width: auto;
+                }
+            }
+        }
+    }  
 }
 legend{
     line-height: 2;
 }
-input[type="text"],textarea{
-    width: 100%;
-}
-form{
-    clear:both;
-}
+/*priorities from colormap*/
 .high{
     background-color: map-get($colormap, high);
     color: map-get($font, white);

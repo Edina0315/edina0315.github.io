@@ -3,106 +3,105 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="assets/css/normalize.css" />
-		<link rel="stylesheet" href="assets/css/sass.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
 		<!--<style>body{font-size:1.1em;line-height:150%;max-width:45em;margin:auto;padding:0 2%;} h1,h2,h3{line-height:1.2;}img{max-width:100%;display:block;margin:.75em auto;}</style>-->
 		<title>To-do list for UI mentoring</title>
 	</head>
 	<body>
 		<main>
 			<h1>Very first to-do list for mentoring</h1>
-			<ul id="list">
-				<li class="high">
+			<ul class="todo-list">
+				<li class="todo-list-item high">
 					<span>Empty the bags</span>
-					<div class="list-buttons">
+					<div class="todo-list-item-buttons">
 						<button type="button" title="Delete">Delete</button>
 						<button type="button" title="Edit">Edit</button>
 						<button type="button" title="Done">Done</button>
 					</div>
 				</li>
-				<li class="low">
+				<li class="todo-list-item low">
 					<span>Move the empty bags to Gyík street</span>
-					<div class="list-buttons">
+					<div class="todo-list-item-buttons">
 						<button type="button" title="Delete">Delete</button>
 						<button type="button" title="Edit">Edit</button>
 						<button type="button" title="Done">Done</button>
 					</div>
 				</li>
-				<li class="low">
+				<li class="todo-list-item low">
 					<span>Pack things into the bags on Gyík street</span>
-					<div class="list-buttons">
+					<div class="todo-list-item-buttons">
 						<button type="button" title="Delete">Delete</button>
 						<button type="button" title="Edit">Edit</button>
 						<button type="button" title="Done">Done</button>
 					</div>
 				</li>
-				<li class="high">
+				<li class="todo-list-item high">
 					<span>Move the bags to Szent István square</span>
-					<div class="list-buttons">
+					<div class="todo-list-item-buttons">
 						<button type="button" title="Delete">Delete</button>
 						<button type="button" title="Edit">Edit</button>
 						<button type="button" title="Done">Done</button>
 					</div>
 				</li>
-				<li class="normal">
+				<li class="todo-list-item normal">
 					<span>Repeat</span>
-					<div class="list-buttons">
+					<div class="todo-list-item-buttons">
 						<button type="button" title="Delete">Delete</button>
 						<button type="button" title="Edit">Edit</button>
 						<button type="button" title="Done">Done</button>
 					</div>
 				</li>
-				<li class="high">
+				<li class="todo-list-item high">
 					<span>Repeat</span>
-					<div class="list-buttons">
+					<div class="todo-list-item-buttons">
 						<button type="button" title="Delete">Delete</button>
 						<button type="button" title="Edit">Edit</button>
 						<button type="button" title="Done">Done</button>
 					</div>
 				</li>
-				<li class="normal">
+				<li class="todo-list-item normal">
 					<span>Repeat</span>
-					<div class="list-buttons">
+					<div class="todo-list-item-buttons">
 						<button type="button" title="Delete">Delete</button>
 						<button type="button" title="Edit">Edit</button>
 						<button type="button" title="Done">Done</button>
 					</div>
 				</li>
-				<li class="low">
+				<li class="todo-list-item low">
 					<span>Repeat</span>
-					<div class="list-buttons">
+					<div class="todo-list-item-buttons">
 						<button type="button" title="Delete">Delete</button>
 						<button type="button" title="Edit">Edit</button>
 						<button type="button" title="Done">Done</button>
 					</div>
 				</li>
-				<li class="normal">
+				<li class="todo-list-item normal">
 					<span>Repeat</span>
-					<div class="list-buttons">
+					<div class="todo-list-item-buttons">
 						<button type="button" title="Delete">Delete</button>
 						<button type="button" title="Edit">Edit</button>
 						<button type="button" title="Done">Done</button>
 					</div>
 				</li>
-				<li class="high">
+				<li class="todo-list-item high">
 					<span>Repeat</span>
-					<div class="list-buttons">
+					<div class="todo-list-item-buttons">
 						<button type="button" title="Delete">Delete</button>
 						<button type="button" title="Edit">Edit</button>
 						<button type="button" title="Done">Done</button>
 					</div>
 				</li>
-				<li class="normal urgent">
+				<li class="todo-list-item normal urgent">
 					<span>Repeat</span>
-					<div class="list-buttons">
+					<div class="todo-list-item-buttons">
 						<button type="button" title="Delete">Delete</button>
 						<button type="button" title="Edit">Edit</button>
 						<button type="button" title="Done">Done</button>
 					</div>
 				</li>
-				<li class="low">
+				<li class="todo-list-item low">
 					<span>Repeat</span>
-					<div class="list-buttons">
+					<div class="todo-list-item-buttons">
 						<button type="button" title="Delete">Delete</button>
 						<button type="button" title="Edit">Edit</button>
 						<button type="button" title="Done">Done</button>
@@ -114,13 +113,13 @@
 			<form method="GET">
 				<fieldset>
 					<legend title="Adding a to-do item">Adding a to-do item</legend>
-					<div id="flex-workaround">
+					<div class="flex-workaround">
 						<div class="form-fields">
-							<label for="title"><span title="Write the title of the task">Title:</span></label>
+							<label class="form-fields-label" for="title"><span title="Write the title of the task">Title:</span></label>
 							<input title="Title of the task" type="text" name="title" id="title" placeholder="A thing to-do" required autofocus>
 						</div>
 						<div class="form-fields">
-							<label for="descr"><span title="Write decription of the task">Description:</span></label>
+							<label class="form-fields-label" class="form-fields-label" for="descr"><span title="Write decription of the task">Description:</span></label>
 							<textarea title="Description" name="descr" id="descr" placeholder="Description" required rows="4" cols="50"></textarea>
 						</div>
 						<div class="form-fields">
@@ -128,7 +127,7 @@
 							<input type="checkbox" name="urgent" value="urgent" title="Urgency" id="urgent">
 						</div>
 						<div class="form-fields">
-							<label for="prio-buttons"><span title="Select the priority">Priority:</span></label>
+							<label class="form-fields-label" for="prio-buttons"><span title="Select the priority">Priority:</span></label>
 							<div id="prio-buttons">
 								<label title="High" for="high"><input type="radio" name="prio" value="high" id="high" required>high</label>
 								<label title="Normal" for="normal"><input type="radio" name="prio" value="normal" id="normal">normal</label>
@@ -136,7 +135,7 @@
 							</div>
 						</div>
 						<div class="form-fields">
-							<label for="day"><span title="Select a day to start">Day to start:</span></label>
+							<label class="form-fields-label" for="day"><span title="Select a day to start">Day to start:</span></label>
 							<select id="day" required title="Starting day">
 								<option hidden disabled selected label=" " value=""></option>
 								<option value="mon">Monday</option>
@@ -149,7 +148,7 @@
 							</select>
 						</div>
 						<div class="form-fields">
-							<label for="deadline"><span title="Select a deadline for the task">Deadline:</span></label>
+							<label class="form-fields-label" for="deadline"><span title="Select a deadline for the task">Deadline:</span></label>
 							<input title="Date" type="date" id="deadline" name="deadline" min="2019-01-15" max="2079-12-31" value="2019-01-15" required>
 						</div>
 						<div id="formsubmit">
@@ -159,7 +158,10 @@
 					</div>
 				</fieldset>
 			</form>
-
 		</main>
+		<script type="text/javascript" src="assets/js/index.js"></script>
+		<script>
+			getData();
+		</script>
 	</body>
 </html>
